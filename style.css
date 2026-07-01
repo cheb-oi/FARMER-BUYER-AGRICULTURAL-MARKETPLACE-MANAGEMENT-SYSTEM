@@ -29,6 +29,10 @@ input{
     border:1px solid #ccc;
     border-radius:5px;
     font-size:16px;
+    outline:none;
+}
+.login-container input:focus{
+    border-color:#007bff;
 }
 button{
     width:100%;
@@ -47,4 +51,13 @@ button:hover{
     margin-top:15px;
     font-size:14px;
     color:#ff0000;
+}
+.signup a{
+    color:#007bff;
+    text-decoration:none;
+    font-weight:bold;
+}
+.signup a:hover{
+    color:#007bff;
+    text-decoration:underline;
 }
