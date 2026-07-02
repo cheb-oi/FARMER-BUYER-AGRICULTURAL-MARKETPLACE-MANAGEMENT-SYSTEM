@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>My Products</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="dashboard">
+            <div class="sidebar">
+                <h2>🌽Farmer Panel</h2>
+                <ul>
+                    <li><a href="farmer.html">Dashboard</a></li>
+                    <li><a href="add_product.html">Add Product</a></li>
+                    <li><a href="my_products.html">My Products</a></li>
+                    <li><a href="orders.html">Orders</a></li>
+                    <li><a href="profile.html">Profile</a></li>
+                    <li><a href="#" onclick="logout()">Logout</a></li>
+                </ul>
+            </div>
+            <div class="content">
+                <h1>My Products</h1>
+                <p>Here you can view and manage your products.</p>
+                <div class="product-list" id="product-list">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Product Name</th>
+                                <th>Category</th>
+                                <th>Price</th>
+                                <th>Quantity</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="product-table-body"></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <script src="script.js"></script>
+        </body>
+</html>
