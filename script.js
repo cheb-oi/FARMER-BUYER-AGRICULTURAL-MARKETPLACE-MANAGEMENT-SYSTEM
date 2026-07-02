@@ -39,3 +39,11 @@ function login(){
     }, 2000);
 }
 }
+function logout() {
+    localStorage.removeItem("username");
+    localStorage.removeItem("password");
+    localStorage.removeItem("fullname");
+    localStorage.removeItem("email");
+    alert("logged out successfully.");
+    window.location.href = "login.html";
+}
