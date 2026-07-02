@@ -47,3 +47,28 @@ function logout() {
     alert("logged out successfully.");
     window.location.href = "login.html";
 }
+//load farmers dashboardstatistics
+function loadDashboard() {
+    //get data from local storage
+    let products = JSON.parse(localStorage.getItem("products")) || [];
+    let orders = JSON.parse(localStorage.getItem("orders")) || [];
+    let messages = JSON.parse(localStorage.getItem("messages")) || [];
+
+    //update the dashboard statistics
+    document.getElementById("total-products").textContent = products.length;
+    document.getElementById("total-orders").textContent = orders.length;
+    //total sales
+    let totalsales=0;
+    orders.forEach(function(order){
+        totalsales += Number(order.amount);
+    });
+    document.getElementById("total-sales").textContent = 
+    "Ksh" + totalsales.tolocaleString();
+    // unread messages
+    let unreadMessages = messages.filter(function(message){
+        return message.read === false;
+    });
+    document.getElementById("totalMessages").textContent = unreadMessages.length + " New";
+}
+//run automatically when the page loads
+window.onload = loadDashboard;
