@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Products</title>
+    <link rel="stylesheet" href="style.css">
+    </head>
+<body>
+    <div class="dashboard">
+        <!-- Sidebar-->
+         <div class="sidebar">
+            <h2>🌽Farmer Panel</h2>
+            <ul>
+                <li><a href="farmer.html">Dashboard</a></li>
+                <li><a href="add_products.html">Add Products</a></li>
+                <li><a href="my_products.html">My Products</a></li>
+                <li><a href="orders.html">Orders</a></li>
+                <li><a href="profile.html">Profile</a></li>
+                <li><a href="sales.html">Sales</a></li>
+                <li><a href="profile.html">Profile</a></li>
+                <li><a href="login.html">Logout</a></li>
+            </ul>
+         </div>
+         <!-- Main Content -->
+          <div class="content">
+            <h1> Add New Products</h1>
+            <form id="Productform">
+                <label>Product Name</label>
+                <input type="text" id="productName" placeholder="Enter product name" required>
+                <label>Category</label>
+                <select id="category" required>
+                    <option value="">Select category</option>
+                    <option value="vegetables">Vegetables</option>
+                    <option value="fruits">Fruits</option>
+                    <option value="cereals">Cereals</option>
+                    <option value="dairy">Dairy</option>
+                    <option value="livestock">Livestock</option>
+                    <option value="Herbs & Spices">Herbs & Spices</option>
+                </select>
+                <label>Price (Ksh)</label>
+                <input type="number" id="price" placeholder="Enter price" required> 
+                <label>Quantity</label>
+                <input type="number" id="quantity" placeholder="Enter quantity" required>
+                <label>Unit</label>
+                <select id="unit">
+                    <option>Kg</option>
+                    <option>Bag</option>
+                    <option>Crate</option>
+                    <option>Piece</option>
+                    <option>litre</option>
+                </select>
+                <label>Description</label>
+                <textarea id="description" placeholder="Describe your product"></textarea>
+                <label>Upload Product Image</label>
+                <input type="file" id="productImage" accept="image/*">
+                <button type="submit">Add Product</button>
+                <p id="message"></p>
+            </form>
+          </div>
+    </div>
+    </body>
+    </html>
+    
