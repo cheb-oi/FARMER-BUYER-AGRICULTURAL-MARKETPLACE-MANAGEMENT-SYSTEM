@@ -72,15 +72,3 @@ function loadDashboard() {
 }
 //run automatically when the page loads
 window.onload = loadDashboard;
-function loadproducts() {
-    let products = JSON.parse(localStorage.getItem("products")) || [];
-    let productList = document.getElementById("product-list");
-    productList.innerHTML = "";
-    products.forEach(function(product, index) => {
-        table.innerHTML += `
-        <tr>
-        <td>${product.productName}</td>
-        <td>${product.category}</td>
-        <td>Ksh ${product.price}</td>
-        <td>${product.quantity}</td>
-        <td>${product.unit}
